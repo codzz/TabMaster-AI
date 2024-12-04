@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TabMaster Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <script src="libs/chart.min.js"></script>
+</head>
+<body class="analytics-page">
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
+        </svg>
+      </div>
+      <div class="title-section">
+        <h1>TabMaster Analytics</h1>
+        <div class="subtitle">Productivity Insights</div>
+      </div>
+    </div>
+
+    <div class="analytics-controls">
+      <button id="weeklyBtn" class="active">Weekly</button>
+      <button id="monthlyBtn">Monthly</button>
+      <button id="exportBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+        </svg>
+        Export Data
+      </button>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="usageChart"></canvas>
+    </div>
+
+    <div class="peak-hours-container">
+      <h2>Peak Productivity Hours</h2>
+      <canvas id="peakHoursChart"></canvas>
+    </div>
+
+    <div class="most-visited-container">
+      <h2>Most Visited Sites by Group</h2>
+      <div id="mostVisitedList" class="most-visited-list"></div>
+    </div>
+  </div>
+
+  <script type="module" src="src/js/analytics-page.js"></script>
+</body>
+</html>

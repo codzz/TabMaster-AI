@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "TabMaster AI - Smart Tab Organization",
+  "version": "1.0",
+  "description": "Intelligently organize and categorize your browser tabs using AI-powered grouping for enhanced productivity.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "tabGroups",
+    "storage",
+    "history",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://localhost:44385/*"
+  ],
+  "background": {
+    "service_worker": "src/js/background.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [{
+    "resources": [
+      "src/js/*.js",
+      "libs/*.js"
+    ],
+    "matches": ["<all_urls>"]
+  }]
+}
